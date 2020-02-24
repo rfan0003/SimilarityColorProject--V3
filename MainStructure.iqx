@@ -1,0 +1,394 @@
+﻿<defaults>
+/ screencolor = (127,127,127)
+</defaults>
+
+<include>
+/ file = "CircleLocation.iqx"
+/ file = "PictureAndText.iqx"
+/ file = "ResponseStep.iqx"
+/ file = "ColorChoose.iqx"
+</include>
+
+<values>
+/response = 0
+/temp = 0
+</values>
+
+
+********************************************************************************************************************************
+********************************************************************************************************************************
+<trial Fixiation>
+/ stimulusframes = [1 = cross]
+/ timeout = 500
+/ branch = [
+	trial.PresentCircles
+]
+</trial>
+
+<trial PresentCircles>
+/ ontrialbegin = [
+if(counter.CircleChoose.selectedvalue == 1){
+		trial.PresentCircles.insertstimulusframe(text.cross,1);
+		trial.PresentCircles.insertstimulusframe(shape.F1,1);
+		trial.PresentCircles.insertstimulusframe(shape.F2,1);
+	}else if (counter.CircleChoose.selectedvalue == 2){
+		trial.PresentCircles.insertstimulusframe(text.cross,1);
+		trial.PresentCircles.insertstimulusframe(shape.F1,1);
+		trial.PresentCircles.insertstimulusframe(shape.P1,1);
+	}else if (counter.CircleChoose.selectedvalue == 3){
+		trial.PresentCircles.insertstimulusframe(text.cross,1);
+		trial.PresentCircles.insertstimulusframe(shape.F1,1);
+		trial.PresentCircles.insertstimulusframe(shape.P2,1);
+	}else if (counter.CircleChoose.selectedvalue == 4){
+		trial.PresentCircles.insertstimulusframe(text.cross,1);
+		trial.PresentCircles.insertstimulusframe(shape.F2,1);
+		trial.PresentCircles.insertstimulusframe(shape.P1,1);
+	}else if (counter.CircleChoose.selectedvalue == 5){
+		trial.PresentCircles.insertstimulusframe(text.cross,1);
+		trial.PresentCircles.insertstimulusframe(shape.F2,1);
+		trial.PresentCircles.insertstimulusframe(shape.P2,1);
+	}else if (counter.CircleChoose.selectedvalue == 6){
+		trial.PresentCircles.insertstimulusframe(text.cross,1);
+		trial.PresentCircles.insertstimulusframe(shape.P1,1);
+		trial.PresentCircles.insertstimulusframe(shape.P2,1);
+	}
+	
+	if(counter.ColorChoose_F1.selectedvalue == 1){
+		values.R_F1 = 255;
+		values.G_F1 = 0;
+		values.B_F1 = 0;
+	}else if (counter.ColorChoose_F1.selectedvalue == 2){
+		values.R_F1 = 255;
+		values.G_F1 = 170;
+		values.B_F1 = 0;
+	}else if (counter.ColorChoose_F1.selectedvalue == 3){
+		values.R_F1 = 170;
+		values.G_F1 = 255;
+		values.B_F1 = 0;
+	}else if (counter.ColorChoose_F1.selectedvalue == 4){
+		values.R_F1 = 0;
+		values.G_F1 = 255;
+		values.B_F1 = 0;
+	}else if (counter.ColorChoose_F1.selectedvalue == 5){
+		values.R_F1 = 0;
+		values.G_F1 = 255;
+		values.B_F1 = 169;
+	}else if (counter.ColorChoose_F1.selectedvalue == 6){
+		values.R_F1 = 0;
+		values.G_F1 = 169;
+		values.B_F1 = 255;
+	}else if (counter.ColorChoose_F1.selectedvalue == 7){
+		values.R_F1 = 0;
+		values.G_F1 = 0;
+		values.B_F1 = 255;
+	}else if (counter.ColorChoose_F1.selectedvalue == 8){
+		values.R_F1 = 170;
+		values.G_F1 = 0;
+		values.B_F1 = 255;
+	}else{
+		values.R_F1 = 255;
+		values.G_F1 = 0;
+		values.B_F1 = 170;
+	}
+	
+	if(counter.ColorChoose_F2.selectedvalue == 1){
+		values.R_F2 = 255;
+		values.G_F2 = 0;
+		values.B_F2 = 0;
+	}else if (counter.ColorChoose_F2.selectedvalue == 2){
+		values.R_F2 = 255;
+		values.G_F2 = 170;
+		values.B_F2 = 0;
+	}else if (counter.ColorChoose_F2.selectedvalue == 3){
+		values.R_F2 = 170;
+		values.G_F2 = 255;
+		values.B_F2 = 0;
+	}else if (counter.ColorChoose_F2.selectedvalue == 4){
+		values.R_F2 = 0;
+		values.G_F2 = 255;
+		values.B_F2 = 0;
+	}else if (counter.ColorChoose_F2.selectedvalue == 5){
+		values.R_F2 = 0;
+		values.G_F2 = 255;
+		values.B_F2 = 169;
+	}else if (counter.ColorChoose_F2.selectedvalue == 6){
+		values.R_F2 = 0;
+		values.G_F2 = 169;
+		values.B_F2 = 255;
+	}else if (counter.ColorChoose_F2.selectedvalue == 7){
+		values.R_F2 = 0;
+		values.G_F2 = 0;
+		values.B_F2 = 255;
+	}else if (counter.ColorChoose_F2.selectedvalue == 8){
+		values.R_F2 = 170;
+		values.G_F2 = 0;
+		values.B_F2 = 255;
+	}else{
+		values.R_F2 = 255;
+		values.G_F2 = 0;
+		values.B_F2 = 170;
+	}	
+	
+	if(counter.ColorChoose_P1.selectedvalue == 1){
+		values.R_P1 = 255;
+		values.G_P1 = 0;
+		values.B_P1 = 0;
+	}else if (counter.ColorChoose_P1.selectedvalue == 2){
+		values.R_P1 = 255;
+		values.G_P1 = 170;
+		values.B_P1 = 0;
+	}else if (counter.ColorChoose_P1.selectedvalue == 3){
+		values.R_P1 = 170;
+		values.G_P1 = 255;
+		values.B_P1 = 0;
+	}else if (counter.ColorChoose_P1.selectedvalue == 4){
+		values.R_P1 = 0;
+		values.G_P1 = 255;
+		values.B_P1 = 0;
+	}else if (counter.ColorChoose_P1.selectedvalue == 5){
+		values.R_P1 = 0;
+		values.G_P1 = 255;
+		values.B_P1 = 169;
+	}else if (counter.ColorChoose_P1.selectedvalue == 6){
+		values.R_P1 = 0;
+		values.G_P1 = 169;
+		values.B_P1 = 255;
+	}else if (counter.ColorChoose_P1.selectedvalue == 7){
+		values.R_P1 = 0;
+		values.G_P1 = 0;
+		values.B_P1 = 255;
+	}else if (counter.ColorChoose_P1.selectedvalue == 8){
+		values.R_P1 = 170;
+		values.G_P1 = 0;
+		values.B_P1 = 255;
+	}else{
+		values.R_P1 = 255;
+		values.G_P1 = 0;
+		values.B_P1 = 170;
+	}
+	
+	if(counter.ColorChoose_P2.selectedvalue == 1){
+		values.R_P2 = 255;
+		values.G_P2 = 0;
+		values.B_P2 = 0;
+	}else if (counter.ColorChoose_P2.selectedvalue == 2){
+		values.R_P2 = 255;
+		values.G_P2 = 170;
+		values.B_P2 = 0;
+	}else if (counter.ColorChoose_P2.selectedvalue == 3){
+		values.R_P2 = 170;
+		values.G_P2 = 255;
+		values.B_P2 = 0;
+	}else if (counter.ColorChoose_P2.selectedvalue == 4){
+		values.R_P2 = 0;
+		values.G_P2 = 255;
+		values.B_P2 = 0;
+	}else if (counter.ColorChoose_P2.selectedvalue == 5){
+		values.R_P2 = 0;
+		values.G_P2 = 255;
+		values.B_P2 = 169;
+	}else if (counter.ColorChoose_P2.selectedvalue == 6){
+		values.R_P2 = 0;
+		values.G_P2 = 169;
+		values.B_P2 = 255;
+	}else if (counter.ColorChoose_P2.selectedvalue == 7){
+		values.R_P2 = 0;
+		values.G_P2 = 0;
+		values.B_P2 = 255;
+	}else if (counter.ColorChoose_P2.selectedvalue == 8){
+		values.R_P2 = 170;
+		values.G_P2 = 0;
+		values.B_P2 = 255;
+	}else{
+		values.R_P2 = 255;
+		values.G_P2 = 0;
+		values.B_P2 = 170;
+	}
+	
+	
+	
+	values.angle_1 = rand(-90,90);
+	values.angle_3 = rand(values.range_of_P_min,values.range_of_P_max);
+	if(values.angle_1 < 0){
+		if(abs(values.angle_1) > 90 - values.angle_min_F){
+			values.angle_2 = rand(values.angle_1 + values.angle_min_F,90);
+		}else if (abs(values.angle_1) <= 90 - values.angle_min_F){
+			if(counter.F2_position.selectedvalue == -1){
+				values.angle_2 = rand(-90,values.angle_1 - values.angle_min_F);
+			}else{
+				values.angle_2 = rand(values.angle_1 + values.angle_min_F,90);
+			}
+		}
+	}else{
+		if(values.angle_1 > 90 - values.angle_min_F){
+			values.angle_2 = rand(-90,values.angle_1 - values.angle_min_F);
+		}else if (values.angle_1 <= 90 - values.angle_min_F){
+			if(counter.F2_position.selectedvalue == -1){
+				values.angle_2 = rand(values.angle_1 + values.angle_min_F,90);
+			}else{
+				values.angle_2 = rand(-90,values.angle_1 - values.angle_min_F);
+			}
+		}
+	}
+	
+	if(values.angle_3 < 0){
+		if(abs(values.angle_3) > values.range_of_P_max - values.angle_min_P){
+			values.angle_4 = rand(values.angle_3 + values.angle_min_P,values.range_of_P_max);
+		}else if(abs(values.angle_3) <= values.range_of_P_max - values.angle_min_P){
+			if(counter.P2_position.selectedvalue == -1){
+				values.angle_4 = rand(values.range_of_P_min,values.angle_3 - values.angle_min_P);
+			}else{
+				values.angle_4 = rand(values.angle_3 + values.angle_min_P,values.range_of_P_max);
+			}
+		}
+	}else{
+		if(values.angle_3 > values.range_of_P_max - values.angle_min_P){
+			values.angle_4 = rand(values.range_of_P_min,values.angle_3 - values.angle_min_P);
+		}else if(values.angle_3 <= values.range_of_P_max - values.angle_min_P){
+			if(counter.P2_position.selectedvalue == -1){
+				values.angle_4 = rand(values.angle_3 + values.angle_min_P,values.range_of_P_max);
+			}else{
+				values.angle_4 = rand(values.range_of_P_min,values.angle_3 - values.angle_min_P);
+			}
+		}
+	}
+	
+]
+/ stimulusframes = []
+/ timeout = 250
+/ ontrialend = [
+	trial.PresentCircles.clearstimulusframes();
+]
+/ branch = [
+	trial.ResponseStep
+]
+</trial>
+
+********************************************************************************************************************************
+********************************************************************************************************************************
+<trial ResponseStep>
+/ ontrialbegin = [
+	if(counter.CircleChoose.selectedvalue == 1){
+		trial.ResponseStep.insertstimulusframe(text.cross,1);
+		trial.ResponseStep.insertstimulusframe(picture.F1_resp,1);
+		trial.ResponseStep.insertstimulusframe(picture.F2_resp,1);
+	}else if (counter.CircleChoose.selectedvalue == 2){
+		trial.ResponseStep.insertstimulusframe(text.cross,1);
+		trial.ResponseStep.insertstimulusframe(picture.F1_resp,1);
+		trial.ResponseStep.insertstimulusframe(picture.P1_resp,1);
+	}else if (counter.CircleChoose.selectedvalue == 3){
+		trial.ResponseStep.insertstimulusframe(text.cross,1);
+		trial.ResponseStep.insertstimulusframe(picture.F1_resp,1);
+		trial.ResponseStep.insertstimulusframe(picture.P2_resp,1);
+	}else if (counter.CircleChoose.selectedvalue == 4){
+		trial.ResponseStep.insertstimulusframe(text.cross,1);
+		trial.ResponseStep.insertstimulusframe(picture.F2_resp,1);
+		trial.ResponseStep.insertstimulusframe(picture.P1_resp,1);
+	}else if (counter.CircleChoose.selectedvalue == 5){
+		trial.ResponseStep.insertstimulusframe(text.cross,1);
+		trial.ResponseStep.insertstimulusframe(picture.F2_resp,1);
+		trial.ResponseStep.insertstimulusframe(picture.P2_resp,1);
+	}else if (counter.CircleChoose.selectedvalue == 6){
+		trial.ResponseStep.insertstimulusframe(text.cross,1);
+		trial.ResponseStep.insertstimulusframe(picture.P1_resp,1);
+		trial.ResponseStep.insertstimulusframe(picture.P2_resp,1);
+	}
+]
+/ stimulusframes = []
+/ validresponse = (30,31,32,33,36,37,38,39)
+/ ontrialend = [
+	trial.ResponseStep.clearstimulusframes();
+	
+	if(trial.ResponseStep.response == 30){
+		values.response = -4;
+	}else if(trial.ResponseStep.response == 31){
+		values.response = -3;
+	}else if(trial.ResponseStep.response == 32){
+		values.response = -2;
+	}else if(trial.ResponseStep.response == 33){
+		values.response = -1;
+	}else if(trial.ResponseStep.response == 36){
+		values.response = 1;
+	}else if(trial.ResponseStep.response == 37){
+		values.response = 2;
+	}else if(trial.ResponseStep.response == 38){
+		values.response = 3;
+	}else{
+		values.response = 4;
+	}
+]
+/ branch = [
+	trial.feedback
+]
+</trial>
+
+
+<trial feedback>
+/ ontrialbegin = [
+	if (values.response == -4){
+		values.temp = 1;
+		text.feedback_present.insertitem(text.feedback_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.feedback_present,1);
+		text.you_press_present.insertitem(text.you_press_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.you_press_present,1);
+	}else if(values.response == -3){
+		values.temp = 2;
+		text.feedback_present.insertitem(text.feedback_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.feedback_present,1);
+		text.you_press_present.insertitem(text.you_press_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.you_press_present,1);
+	}else if(values.response == -2){
+		values.temp = 3;
+		text.feedback_present.insertitem(text.feedback_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.feedback_present,1);
+		text.you_press_present.insertitem(text.you_press_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.you_press_present,1);
+	}else if(values.response == -1){
+		values.temp = 4;
+		text.feedback_present.insertitem(text.feedback_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.feedback_present,1);
+		text.you_press_present.insertitem(text.you_press_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.you_press_present,1);
+	}else if(values.response == 1){
+		values.temp = 5;
+		text.feedback_present.insertitem(text.feedback_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.feedback_present,1);
+		text.you_press_present.insertitem(text.you_press_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.you_press_present,1);
+	}else if(values.response == 2){
+		values.temp = 6;
+		text.feedback_present.insertitem(text.feedback_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.feedback_present,1);
+		text.you_press_present.insertitem(text.you_press_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.you_press_present,1);
+	}else if(values.response == 3){
+		values.temp = 7;
+		text.feedback_present.insertitem(text.feedback_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.feedback_present,1);
+		text.you_press_present.insertitem(text.you_press_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.you_press_present,1);
+	}else{
+		values.temp = 8;
+		text.feedback_present.insertitem(text.feedback_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.feedback_present,1);
+		text.you_press_present.insertitem(text.you_press_resource.item(values.temp),1);
+		trial.feedback.insertstimulusframe(text.you_press_present,1);
+	}
+]
+/ stimulusframes = []
+/ timeout = 1000
+/ ontrialend = [
+	trial.feedback.clearstimulusframes();
+	text.feedback_present.clearitems();
+]
+</trial>
+
+
+<block Throughout>
+/ trials = [1  = Fixiation]
+</block>
+
+<expt Test>
+/ blocks = [1-20 = Throughout]
+</expt>
+

@@ -1,0 +1,62 @@
+﻿<values>
+/x = 1px * display.getpixelsx(10,1)
+/y = 1px * display.getpixelsy(50,1)
+/r_F = 1px * display.getpixelsx(6,1)
+/R_P = values.r_F
+/radius_F = 1px * display.getpixelsy(15,1)
+/radius_P = 1px * display.getpixelsx(90,1) - values.R_P
+/angle_min_F = deg(acos(1 - 2 * pow(values.r_F,2)/pow(values.radius_F,2)))
+/angle_min_P = deg(acos(1 - 2 * pow(values.R_P,2)/pow(values.radius_P,2)))
+/range_of_P_min = -1 * deg(asin((values.y - values.R_P)/values.radius_P))
+/range_of_P_max = deg(asin((values.y - values.R_P)/values.radius_P))
+
+/angle_1 = 0
+/angle_2 = 0
+/angle_3 = 0
+/angle_4 = 0
+
+</values>
+
+<counter F2_position>
+/ select = replace
+/ items = (1,-1)
+</counter>
+
+<counter P2_position>
+/ select = replace
+/ items = (1,-1)
+</counter>
+
+<counter CircleChoose>
+/ select = replace(1-6)
+/ selectionrate = block
+</counter>
+
+/ theta_1 = (180 - values.angle_1)*(m_pi/180)
+/ theta_2 = (180 - values.angle_2)*(m_pi/180)
+/ theta_3 = (180 - values.angle_3)*(m_pi/180)
+/ theta_4 = (180 - values.angle_4)*(m_pi/180)
+<expressions>
+/ theta_1 = (values.angle_1)*(m_pi/180)
+/ theta_2 = (values.angle_2)*(m_pi/180)
+/ theta_3 = (values.angle_3)*(m_pi/180)
+/ theta_4 = (values.angle_4)*(m_pi/180)
+
+/ deltax_1 = values.radius_F*cos(expressions.theta_1)
+/ deltay_1 = values.radius_F*sin(expressions.theta_1)
+/ deltax_2 = values.radius_F*cos(expressions.theta_2)
+/ deltay_2 = values.radius_F*sin(expressions.theta_2)
+/ deltax_3 = values.radius_P*cos(expressions.theta_3)
+/ deltay_3 = values.radius_P*sin(expressions.theta_3)
+/ deltax_4 = values.radius_P*cos(expressions.theta_4)
+/ deltay_4 = values.radius_P*sin(expressions.theta_4)
+
+/ a_1 = values.x + expressions.deltax_1
+/ b_1 = values.y + expressions.deltay_1
+/ a_2 = values.x + expressions.deltax_2
+/ b_2 = values.y + expressions.deltay_2
+/ a_3 = values.x + expressions.deltax_3
+/ b_3 = values.y + expressions.deltay_3
+/ a_4 = values.x + expressions.deltax_4
+/ b_4 = values.y + expressions.deltay_4
+</expressions>
