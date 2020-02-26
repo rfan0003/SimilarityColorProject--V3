@@ -43,7 +43,7 @@
 </text>
 
 <text feedback_resource>
-/ items = ("Dissimilar: -4","Dissimilar: -3","Dissimilar: -2","Dissimilar: -1","Similar: 1","Similar: 2","Similar: 3","Similar: 4")
+/ items = ("Dissimilar: 0","Dissimilar: 1","Dissimilar: 2","Dissimilar: 3","Dissimilar: 4","Dissimilar: 5","Dissimilar: 6","Dissimilar: 7")
 / color = yellow
 / txbgcolor = (127, 127, 127)
 / position = (50%,50%)

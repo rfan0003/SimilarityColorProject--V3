@@ -1,8 +1,8 @@
 ﻿<values>
 /x = 1px * display.getpixelsx(10,1)
 /y = 1px * display.getpixelsy(50,1)
-/r_F = 1px * display.getpixelsx(6,1)
-/R_P = values.r_F
+/r_F = 1px * display.getpixelsx(2,1)
+/R_P = 3 * values.r_F
 /radius_F = 1px * display.getpixelsy(15,1)
 /radius_P = 1px * display.getpixelsx(90,1) - values.R_P
 /angle_min_F = deg(acos(1 - 2 * pow(values.r_F,2)/pow(values.radius_F,2)))
@@ -27,10 +27,6 @@
 / items = (1,-1)
 </counter>
 
-<counter CircleChoose>
-/ select = replace(1-6)
-/ selectionrate = block
-</counter>
 
 / theta_1 = (180 - values.angle_1)*(m_pi/180)
 / theta_2 = (180 - values.angle_2)*(m_pi/180)
