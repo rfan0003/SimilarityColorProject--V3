@@ -1,0 +1,29 @@
+﻿<defaults>
+/ screencolor = (127,127,127)
+</defaults>
+
+
+<values>
+/color = #ff0000
+/color2 = #aaff00
+</values>
+
+<shape test>
+/ shape = circle
+/ size = (30%,30%)
+/ position = (50%,50%)
+/ color = values.color
+</shape>
+
+<trial tt>
+/ ontrialbegin = [
+	shape.test.color = values.color2;
+	
+]
+/ stimulusframes = [1 = test]
+/ validresponse = (57)
+</trial>
+
+<block kk>
+/ trials = [1 = tt]
+</block>

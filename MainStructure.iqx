@@ -7,6 +7,8 @@
 / file = "PictureAndText.iqx"
 / file = "ResponseStep.iqx"
 / file = "BaseScript.iqx"
+/ file = "InstructionPage.iqx"
+/ file = "PracticeTrial.iqx"
 </include>
 
 <values>
@@ -22,21 +24,16 @@
 /response_time = 0
 /temp = 0
 
-/R_F1 = 0
-/G_F1 = 0
-/B_F1 = 0
+/color1 = #ff0000
+/color2 = #ffaa00
+/color3 = #aaff00
+/color4 = #00ff00
+/color5 = #00ffa9
+/color6 = #00a9ff
+/color7 = #0000ff
+/color8 = #aa00ff
+/color9 = #ff00aa
 
-/R_F2 = 0
-/G_F2 = 0
-/B_F2 = 0
-
-/R_P1 = 0
-/G_P1 = 0
-/B_P1 = 0
-
-/R_P2 = 0
-/G_P2 = 0
-/B_P2 = 0
 </values>
 
 
@@ -126,96 +123,60 @@
 		values.Position_2 = values.angle_2;
 		
 		if(item.Circle_1_color.item(counter.order.selectedvalue) == "1"){
-			values.R_F1 = 255;
-			values.G_F1 = 0;
-			values.B_F1 = 0;
+			shape.F1.color = values.color1;
 			values.Color_1 = 1;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "2"){
-			values.R_F1 = 255;
-			values.G_F1 = 170;
-			values.B_F1 = 0;
+			shape.F1.color = values.color2;
 			values.Color_1 = 2;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "3"){
-			values.R_F1 = 170;
-			values.G_F1 = 255;
-			values.B_F1 = 0;
+			shape.F1.color = values.color3;
 			values.Color_1 = 3;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "4"){
-			values.R_F1 = 0;
-			values.G_F1 = 255;
-			values.B_F1 = 0;
+			shape.F1.color = values.color4;
 			values.Color_1 = 4;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "5"){
-			values.R_F1 = 0;
-			values.G_F1 = 255;
-			values.B_F1 = 169;
+			shape.F1.color = values.color5;
 			values.Color_1 = 5;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "6"){
-			values.R_F1 = 0;
-			values.G_F1 = 169;
-			values.B_F1 = 255;
+			shape.F1.color = values.color6;
 			values.Color_1 = 6;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "7"){
-			values.R_F1 = 0;
-			values.G_F1 = 0;
-			values.B_F1 = 255;
+			shape.F1.color = values.color7;
 			values.Color_1 = 7;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "8"){
-			values.R_F1 = 170;
-			values.G_F1 = 0;
-			values.B_F1 = 255;
+			shape.F1.color = values.color8;
 			values.Color_1 = 8;
 		}else{
-			values.R_F1 = 255;
-			values.G_F1 = 0;
-			values.B_F1 = 170;
+			shape.F1.color = values.color9;
 			values.Color_1 = 9;
 		}
 		
 		if(item.Circle_2_color.item(counter.order.selectedvalue) == "1"){
-			values.R_F2 = 255;
-			values.G_F2 = 0;
-			values.B_F2 = 0;
+			shape.F2.color = values.color1;
 			values.Color_2 = 1;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "2"){
-			values.R_F2 = 255;
-			values.G_F2 = 170;
-			values.B_F2 = 0;
+			shape.F2.color = values.color2;
 			values.Color_2 = 2;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "3"){
-			values.R_F2 = 170;
-			values.G_F2 = 255;
-			values.B_F2 = 0;
+			shape.F2.color = values.color3;
 			values.Color_2 = 3;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "4"){
-			values.R_F2 = 0;
-			values.G_F2 = 255;
-			values.B_F2 = 0;
+			shape.F2.color = values.color4;
 			values.Color_2 = 4;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "5"){
-			values.R_F2 = 0;
-			values.G_F2 = 255;
-			values.B_F2 = 169;
+			shape.F2.color = values.color5;
 			values.Color_2 = 5;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "6"){
-			values.R_F2 = 0;
-			values.G_F2 = 169;
-			values.B_F2 = 255;
+			shape.F2.color = values.color6;
 			values.Color_2 = 6;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "7"){
-			values.R_F2 = 0;
-			values.G_F2 = 0;
-			values.B_F2 = 255;
+			shape.F2.color = values.color7;
 			values.Color_2 = 7;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "8"){
-			values.R_F2 = 170;
-			values.G_F2 = 0;
-			values.B_F2 = 255;
+			shape.F2.color = values.color8;
 			values.Color_2 = 8;
 		}else{
-			values.R_F2 = 255;
-			values.G_F2 = 0;
-			values.B_F2 = 170;
+			shape.F2.color = values.color9;
 			values.Color_2 = 9;
 		}
 	}else if (item.PositionComination.item(counter.order.selectedvalue) == "FP"){
@@ -228,96 +189,60 @@
 		values.Position_2 = values.angle_3;
 		
 		if(item.Circle_1_color.item(counter.order.selectedvalue) == "1"){
-			values.R_F1 = 255;
-			values.G_F1 = 0;
-			values.B_F1 = 0;
+			shape.F1.color = values.color1;
 			values.Color_1 = 1;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "2"){
-			values.R_F1 = 255;
-			values.G_F1 = 170;
-			values.B_F1 = 0;
+			shape.F1.color = values.color2;
 			values.Color_1 = 2;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "3"){
-			values.R_F1 = 170;
-			values.G_F1 = 255;
-			values.B_F1 = 0;
+			shape.F1.color = values.color3;
 			values.Color_1 = 3;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "4"){
-			values.R_F1 = 0;
-			values.G_F1 = 255;
-			values.B_F1 = 0;
+			shape.F1.color = values.color4;
 			values.Color_1 = 4;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "5"){
-			values.R_F1 = 0;
-			values.G_F1 = 255;
-			values.B_F1 = 169;
+			shape.F1.color = values.color5;
 			values.Color_1 = 5;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "6"){
-			values.R_F1 = 0;
-			values.G_F1 = 169;
-			values.B_F1 = 255;
+			shape.F1.color = values.color6;
 			values.Color_1 = 6;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "7"){
-			values.R_F1 = 0;
-			values.G_F1 = 0;
-			values.B_F1 = 255;
+			shape.F1.color = values.color7;
 			values.Color_1 = 7;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "8"){
-			values.R_F1 = 170;
-			values.G_F1 = 0;
-			values.B_F1 = 255;
+			shape.F1.color = values.color8;
 			values.Color_1 = 8;
 		}else{
-			values.R_F1 = 255;
-			values.G_F1 = 0;
-			values.B_F1 = 170;
+			shape.F1.color = values.color9;
 			values.Color_1 = 9;
 		}
 		
 		if(item.Circle_2_color.item(counter.order.selectedvalue) == "1"){
-			values.R_P1 = 255;
-			values.G_P1 = 0;
-			values.B_P1 = 0;
+			shape.P1.color = values.color1;
 			values.Color_2 = 1;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "2"){
-			values.R_P1 = 255;
-			values.G_P1 = 170;
-			values.B_P1 = 0;
+			shape.P1.color = values.color2;
 			values.Color_2 = 2;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "3"){
-			values.R_P1 = 170;
-			values.G_P1 = 255;
-			values.B_P1 = 0;
+			shape.P1.color = values.color3;
 			values.Color_2 = 3;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "4"){
-			values.R_P1 = 0;
-			values.G_P1 = 255;
-			values.B_P1 = 0;
+			shape.P1.color = values.color4;
 			values.Color_2 = 4;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "5"){
-			values.R_P1 = 0;
-			values.G_P1 = 255;
-			values.B_P1 = 169;
+			shape.P1.color = values.color5;
 			values.Color_2 = 5;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "6"){
-			values.R_P1 = 0;
-			values.G_P1 = 169;
-			values.B_P1 = 255;
+			shape.P1.color = values.color6;
 			values.Color_2 = 6;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "7"){
-			values.R_P1 = 0;
-			values.G_P1 = 0;
-			values.B_P1 = 255;
+			shape.P1.color = values.color7;
 			values.Color_2 = 7;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "8"){
-			values.R_P1 = 170;
-			values.G_P1 = 0;
-			values.B_P1 = 255;
+			shape.P1.color = values.color8;
 			values.Color_2 = 8;
 		}else{
-			values.R_P1 = 255;
-			values.G_P1 = 0;
-			values.B_P1 = 170;
+			shape.P1.color = values.color9;
 			values.Color_2 = 9;
 		}
 	}else if (item.PositionComination.item(counter.order.selectedvalue) == "PP"){
@@ -330,96 +255,60 @@
 		values.Position_2 = values.angle_4;
 		
 		if(item.Circle_1_color.item(counter.order.selectedvalue) == "1"){
-			values.R_P1 = 255;
-			values.G_P1 = 0;
-			values.B_P1 = 0;
+			shape.P1.color = values.color1;
 			values.Color_1 = 1;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "2"){
-			values.R_P1 = 255;
-			values.G_P1 = 170;
-			values.B_P1 = 0;
+			shape.P1.color = values.color2;
 			values.Color_1 = 2;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "3"){
-			values.R_P1 = 170;
-			values.G_P1 = 255;
-			values.B_P1 = 0;
+			shape.P1.color = values.color3;
 			values.Color_1 = 3;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "4"){
-			values.R_P1 = 0;
-			values.G_P1 = 255;
-			values.B_P1 = 0;
+			shape.P1.color = values.color4;
 			values.Color_1 = 4;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "5"){
-			values.R_P1 = 0;
-			values.G_P1 = 255;
-			values.B_P1 = 169;
+			shape.P1.color = values.color5;
 			values.Color_1 = 5;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "6"){
-			values.R_P1 = 0;
-			values.G_P1 = 169;
-			values.B_P1 = 255;
+			shape.P1.color = values.color6;
 			values.Color_1 = 6;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "7"){
-			values.R_P1 = 0;
-			values.G_P1 = 0;
-			values.B_P1 = 255;
+			shape.P1.color = values.color7;
 			values.Color_1 = 7;
 		}else if (item.Circle_1_color.item(counter.order.selectedvalue) == "8"){
-			values.R_P1 = 170;
-			values.G_P1 = 0;
-			values.B_P1 = 255;
+			shape.P1.color = values.color8;
 			values.Color_1 = 8;
 		}else{
-			values.R_P1 = 255;
-			values.G_P1 = 0;
-			values.B_P1 = 170;
+			shape.P1.color = values.color9;
 			values.Color_1 = 9;
 		}
 		
 		if(item.Circle_2_color.item(counter.order.selectedvalue) == "1"){
-			values.R_P2 = 255;
-			values.G_P2 = 0;
-			values.B_P2 = 0;
+			shape.P2.color = values.color1;
 			values.Color_2 = 1;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "2"){
-			values.R_P2 = 255;
-			values.G_P2 = 170;
-			values.B_P2 = 0;
+			shape.P2.color = values.color2;
 			values.Color_2 = 2;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "3"){
-			values.R_P2 = 170;
-			values.G_P2 = 255;
-			values.B_P2 = 0;
+			shape.P2.color = values.color3;
 			values.Color_2 = 3;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "4"){
-			values.R_P2 = 0;
-			values.G_P2 = 255;
-			values.B_P2 = 0;
+			shape.P2.color = values.color4;
 			values.Color_2 = 4;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "5"){
-			values.R_P2 = 0;
-			values.G_P2 = 255;
-			values.B_P2 = 169;
+			shape.P2.color = values.color5;
 			values.Color_2 = 5;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "6"){
-			values.R_P2 = 0;
-			values.G_P2 = 169;
-			values.B_P2 = 255;
+			shape.P2.color = values.color6;
 			values.Color_2 = 6;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "7"){
-			values.R_P2 = 0;
-			values.G_P2 = 0;
-			values.B_P2 = 255;
+			shape.P2.color = values.color7;
 			values.Color_2 = 7;
 		}else if (item.Circle_2_color.item(counter.order.selectedvalue) == "8"){
-			values.R_P2 = 170;
-			values.G_P2 = 0;
-			values.B_P2 = 255;
+			shape.P2.color = values.color8;
 			values.Color_2 = 8;
 		}else{
-			values.R_P2 = 255;
-			values.G_P2 = 0;
-			values.B_P2 = 170;
+			shape.P2.color = values.color9;
 			values.Color_2 = 9;
 		}
 	}
@@ -548,13 +437,22 @@
 ]
 </trial>
 
+<block Instruction>
+/ trials = [1 = Instruction_1]
+</block>
+
+<block Throughout_practice>
+/ trials = [1 = Fixiation_practice]
+</block>
 
 <block Throughout>
-/ trials = [1  = Fixiation]
+/ trials = [1 = Fixiation]
 </block>
 
 <expt Test>
-/ blocks = [1-243 = Throughout]
+/ preinstructions = (start)
+/ postinstructions = (end)
+/ blocks = [1 = Instruction; 2-10 = Throughout_practice; 11-253 = Throughout]
 </expt>
 
 <data>
